@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: mainFont;
+    src: url(./fonts/super_potato/Super\ Potato\ Personal\ Use.ttf);
+}
+
+@font-face{
+    font-family: normalFont;
+    src: url(./fonts/breathe_fire/Breathe\ Fire.otf);
+}
+
+:root{
+    --header-bg-color: rgb(156 163 175);
+    --body-bg-color: rgb(209 213 219);
+    --boder-color: rgb(75 85 99);
+    --button-hover-bg: rgb(230, 233, 236);
+}
+
+body{
+    background-color: var(--body-bg-color);
+}
+
+/* HEADER */
+
+header{
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--header-bg-color);
+}
+
+header p{
+    font-family: mainFont;
+    font-size: clamp(2.3rem, 3vw, 4rem);
+}
+
+/* MAIN BODY */
+
+main{
+    padding: 4% 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer-frame{
+    border: 1px solid var(--boder-color);
+    width: 50dvw;
+    height: 65dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: clamp(1.5rem, 3vh, 5rem);
+    border-radius: 1.6rem;
+}
+
+.player-x-btn, .player-o-btn{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    font-family: normalFont;
+    font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+}
+
+input[type="text"]{
+    width: clamp(15rem, 20vw, 25rem);
+    padding: 2%;
+    font-size: 1.2rem;
+    text-align: center;
+    border: none;
+}
+
+button{
+    width: clamp(5rem, 10vw, 15rem);
+    padding: 8%;
+    font-family: normalFont;
+    font-size: clamp(1rem, 1.7vw, 3rem);
+    border: none;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.28);
+}
+
+button:hover{
+    box-shadow: none;
+    width: clamp(4.8rem, 9.8vw, 14.8rem);
+    background-color: var(--button-hover-bg);
+}
