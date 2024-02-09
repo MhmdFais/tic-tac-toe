@@ -78,7 +78,7 @@ input[type="text"]{
     border: none;
 }
 
-button{
+.start-button{
     width: clamp(5rem, 10vw, 15rem);
     padding: 8%;
     font-family: normalFont;
@@ -87,8 +87,8 @@ button{
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.28);
 }
 
-button:hover{
+.start-button:hover{
     box-shadow: none;
-    width: clamp(4.8rem, 9.8vw, 14.8rem);
+    width: clamp(4.8rem, 9.8vw, 14.8rem); 
     background-color: var(--button-hover-bg);
 }
