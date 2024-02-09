@@ -1,7 +1,10 @@
 //Game baord appear
 
-let startBtn = document.querySelector(".start-button");
-startBtn.addEventListener("click", () => {
-    document.querySelector(".outer-frame").style.display = "none";
-    document.querySelector(".board-frame").style.display = "grid";
-});
+const screenController = () => {
+  const startButton = document.getElementById("start-button");
+  const gameBoard = document.getElementById("game-board");
+  const restartButton = document.getElementById("restart-btn");
+  const quitButton = document.getElementById("quit-btn");
+  const playerOne = document.getElementById("player-x");
+  const playerTwo = document.getElementById("player-o");
+};
