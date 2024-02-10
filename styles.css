@@ -98,7 +98,22 @@ input[type="text"]{
 .game-board{
     display: grid;
     grid-template-columns: repeat(3, min(15vw, 15vh));
-    grid-auto-rows: repeat(3, min(15vw, 15vh));
+    grid-template-rows: repeat(3, min(15vw, 15vh));
+    gap: 0.5rem;
+    margin-bottom: 5%;
+}
+
+.game-board div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: mainFont;
+    font-size: clamp(2rem, 4vw, 6rem);
+    background-color: var(--header-bg-color);
+    /* color: var(--body-bg-color); */
+    cursor: pointer;
+    border: 1px solid var(--boder-color);
+    border-radius: 0.5rem;
 }
 
 .game-btn{
@@ -120,4 +135,31 @@ input[type="text"]{
     box-shadow: none;
     width: clamp(2.8rem, 7.8vw, 11.8rem);
     background-color: var(--button-hover-bg);
+}
+
+.active-player{
+    font-size: clamp(1.3rem, 2.8vw, 3.8rem);
+    font-family: normalFont;
+    /* color: var(--header-bg-color); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2%;
+}
+
+
+/* TRANSITION */
+
+.outer-frame,
+.board-frame {
+    transition: opacity 0.5s ease-in;
+}
+
+.outer-frame {
+    opacity: 1;
+}
+
+.board-frame {
+    opacity: 0;
+    /* display: none;  */
 }
