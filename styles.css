@@ -19,6 +19,8 @@
     --body-bg-color: rgb(209 213 219);
     --boder-color: rgb(75 85 99);
     --button-hover-bg: rgb(230, 233, 236);
+    --player-turn-color: rgb(82, 77, 77);
+    --player-win-mdg-color: rgb(146, 65, 65);
 }
 
 body{
@@ -97,8 +99,8 @@ input[type="text"]{
 
 .game-board{
     display: grid;
-    grid-template-columns: repeat(3, min(15vw, 15vh));
-    grid-template-rows: repeat(3, min(15vw, 15vh));
+    grid-template-columns: repeat(3, min(14vw, 14vh));
+    grid-template-rows: repeat(3, min(14vw, 14vh));
     gap: 0.5rem;
     margin-bottom: 5%;
 }
@@ -138,9 +140,9 @@ input[type="text"]{
 }
 
 .active-player{
-    font-size: clamp(1.3rem, 2.8vw, 3.8rem);
+    font-size: clamp(1rem, 2.5vw, 3.5rem);
     font-family: normalFont;
-    /* color: var(--header-bg-color); */
+    color: var(--player-turn-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -162,4 +164,14 @@ input[type="text"]{
 .board-frame {
     opacity: 0;
     /* display: none;  */
+}
+
+/* WINNING MESSAGE */
+
+.game-info{
+    font-family: normalFont;
+    color: var(--player-win-mdg-color);
+    font-size: clamp(1.3rem, 2.8vw, 3.8rem);
+    text-align: center;
+    padding: 2%;
 }
