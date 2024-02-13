@@ -127,8 +127,14 @@ const game = (() => {
 
   //quit game
   const quitGame = () => {
-    outerContainer.style.display = "flex";
-    boardContainer.style.display = "none";
+    outerContainer.style.opacity = "1";
+    setTimeout(() => {
+      outerContainer.style.display = "flex";
+      boardContainer.style.display = "none";
+      setTimeout(() => {
+        boardContainer.style.opacity = "0";
+      }, 50); // Delay for a smoother transition
+    }, 500);
     outerContainer.style.opacity = "1";
     boardContainer.style.opacity = "0";
     playerOne.value = "";

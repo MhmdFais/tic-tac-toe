@@ -154,7 +154,7 @@ input[type="text"]{
 
 .outer-frame,
 .board-frame {
-    transition: opacity 0.5s ease-in;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .outer-frame {
